@@ -63,7 +63,7 @@ ggplotly(g)
 ## Offering Excellent "Normal" Learning!
 
 * #### Available worldwide via online access!
-* #### Try it out!
+* #### Try it out! https://abbagguya.shinyapps.io/normalexploration
 
 ```{r clustering,echo=FALSE,message=FALSE}
 require(leaflet)
