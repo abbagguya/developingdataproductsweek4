@@ -36,7 +36,8 @@ shinyServer(function(input, output) {
                        rep("4",input$d4.pnts)))
     })
     k.m.centers<-reactive({
-        kmeans(cluster()[,1:2],4,20)$centers
+        centers<-kmeans(cluster()[,1:2],4,20)$centers
+        data.frame(X=centers[,1],Y=centers[,2],d=c("1","2","3","4"))
     })
     output$hist<-renderPlot({
         g<-ggplot(hypothesis(),aes(X,fill=d))+
@@ -49,6 +50,6 @@ shinyServer(function(input, output) {
     output$kmcl<-renderPlot({
         ggplot(cluster(),aes(X,Y,color=d))+geom_point(size=2.5,alpha=0.6)+xlim(-10,10)+ylim(-10,10)+
             theme(legend.position='none')+
-            annotate('text',k.m.centers()[,1],k.m.centers()[,2],label=c("@","@","@","@"))
+            geom_point(data=k.m.centers(),aes(X,Y),shape=3,color='black',size=4,alpha=1)
     })
 })

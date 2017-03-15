@@ -86,12 +86,12 @@ shinyUI(fluidPage(
             ),
             tabPanel("Hypothesis Thesting",br(),
                      plotOutput(outputId="hist",width="870px",height="400px"),
-                     h5("Adjust the parameters under the Hypothesis tab in the side bar panel. Hypothesis testing clearly depends on intersection and number of points (sample size), especially for small number of points."),
-                     h5("Student's T-test is performed on the two normal distributions for which the null hypothesis is that the mean of the pink distribution is greater than or equal to the mean of the green distribution. If the 95% Confidence-Interval T-test is passed, then the null hypothesis is rejected, i.e. the mean of the pink distribution is greater than the mean of the green distribution. For large number of points, it is remarkable how close the distributions can be with the hypothesis being rejected. On the other hand, for small number of points (for which the T-distribution is appropriate), rejection of the null hypothesis is more sporadic near the threshold, as expected.")
+                     h5("Adjust the parameters under the Hypothesis Testing tab in the side bar panel. Hypothesis testing clearly depends on intersection and number of points (sample size), especially for small number of points."),
+                     h5("Student's T-test is performed on the two normal distributions for which the null hypothesis is that the mean of the pink distribution is greater than or equal to the mean of the green distribution. If the 95% Confidence-Interval T-test is passed, then the null hypothesis is rejected, i.e. the mean of the green distribution is greater than the mean of the pink distribution. For large number of points, it is remarkable how close the distributions can be with the hypothesis being rejected. On the other hand, for small number of points (for which the T-distribution is appropriate), rejection of the null hypothesis is more sporadic near the threshold, as expected.")
             ),
             tabPanel("K-Means Clustering",br(),
                      plotOutput(outputId="kmcl",width="600px",height="550px"),
-                     h5("Adjust the parameters under the K-Means tab in the side bar panel. The K-Means Clustering center positions denoted by @ clearly depend on intersection, numbers of points (small numbers in particular), and shapes of the distributions.")
+                     h5("Adjust the parameters under the K-Means Clustering tab in the side bar panel. The K-Means Clustering center positions denoted by + clearly depend on intersection, numbers of points (small numbers in particular), and shapes of the distributions.")
             )
         )
     )
