@@ -37,7 +37,7 @@ shinyServer(function(input, output) {
     })
     k.m.centers<-reactive({
         centers<-kmeans(cluster()[,1:2],4,20)$centers
-        data.frame(X=centers[,1],Y=centers[,2],d=c("1","2","3","4"))
+        data.frame(X=centers[,1],Y=centers[,2],d=as.character(1:4))
     })
     output$hist<-renderPlot({
         g<-ggplot(hypothesis(),aes(X,fill=d))+
