@@ -57,33 +57,33 @@ shinyUI(fluidPage(
                                     br(),
                                     sliderInput(inputId="d1.pnts",label=h6("Number of Points"),0,100,100,10),
                                     sliderInput(inputId="x1.mean",label=h6("X-Mean"),-5,5,0,0.01),
-                                    sliderInput(inputId="x1.sdev",label=h6("X-Standard Deviation"),1,3,1,0.01),
+                                    sliderInput(inputId="x1.sdev",label=h6("X-Standard Deviation"),1,2.5,1,0.01),
                                     sliderInput(inputId="y1.mean",label=h6("Y-Mean"),-5,5,0,0.01),
-                                    sliderInput(inputId="y1.sdev",label=h6("Y-Standard Deviation"),1,3,1,0.01)
+                                    sliderInput(inputId="y1.sdev",label=h6("Y-Standard Deviation"),1,2.5,1,0.01)
                                 ),
                                 tabPanel(h5(strong("Green")),
                                     br(),
                                     sliderInput(inputId="d2.pnts",label=h6("Number of Points"),0,100,100,10),
                                     sliderInput(inputId="x2.mean",label=h6("X-Mean"),-5,5,0,0.01),
-                                    sliderInput(inputId="x2.sdev",label=h6("X-Standard Deviation"),1,3,1,0.01),
+                                    sliderInput(inputId="x2.sdev",label=h6("X-Standard Deviation"),1,2.5,1,0.01),
                                     sliderInput(inputId="y2.mean",label=h6("Y-Mean"),-5,5,0,0.01),
-                                    sliderInput(inputId="y2.sdev",label=h6("Y-Standard Deviation"),1,3,1,0.01)
+                                    sliderInput(inputId="y2.sdev",label=h6("Y-Standard Deviation"),1,2.5,1,0.01)
                                 ),
                                 tabPanel(h5(strong("Blue")),
                                     br(),
                                     sliderInput(inputId="d3.pnts",label=h6("Number of Points"),0,100,100,10),
                                     sliderInput(inputId="x3.mean",label=h6("X-Mean"),-5,5,0,0.01),
-                                    sliderInput(inputId="x3.sdev",label=h6("X-Standard Deviation"),1,3,1,0.01),
+                                    sliderInput(inputId="x3.sdev",label=h6("X-Standard Deviation"),1,2.5,1,0.01),
                                     sliderInput(inputId="y3.mean",label=h6("Y-Mean"),-5,5,0,0.01),
-                                    sliderInput(inputId="y3.sdev",label=h6("Y-Standard Deviation"),1,3,1,0.01)
+                                    sliderInput(inputId="y3.sdev",label=h6("Y-Standard Deviation"),1,2.5,1,0.01)
                                 ),
                                 tabPanel(h5(strong("Purple")),
                                     br(),
                                     sliderInput(inputId="d4.pnts",label=h6("Number of Points"),0,100,100,10),
                                     sliderInput(inputId="x4.mean",label=h6("X-Mean"),-5,5,0,0.01),
-                                    sliderInput(inputId="x4.sdev",label=h6("X-Standard Deviation"),1,3,1,0.01),
+                                    sliderInput(inputId="x4.sdev",label=h6("X-Standard Deviation"),1,2.5,1,0.01),
                                     sliderInput(inputId="y4.mean",label=h6("Y-Mean"),-5,5,0,0.01),
-                                    sliderInput(inputId="y4.sdev",label=h6("Y-Standard Deviation"),1,3,1,0.01)
+                                    sliderInput(inputId="y4.sdev",label=h6("Y-Standard Deviation"),1,2.5,1,0.01)
                                 )
                             )
                      ),
