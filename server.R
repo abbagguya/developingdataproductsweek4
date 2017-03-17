@@ -44,7 +44,7 @@ shinyServer(function(input, output) {
             geom_histogram(position='identity',binwidth=input$binw,color='gray',alpha=0.75)+
             xlim(-10,10)+xlab("OBSERVATION")+ylab("FREQUENCY")+theme(legend.position='none')+
             geom_line(data=n.distr(),aes(x=X,y=Y,color=d),size=1.5)
-        g+annotate('text',0,ggplot_build(g)$layout$panel_ranges[[1]]$y.range[2],
+        g+annotate('text',0,ggplot_build(g)$layout$panel_ranges[[1]]$y.range[2]*1.1,
                    label=ifelse(Ttst(),paste0("Null hypothesis is rejected!\n","Green distribution has a greater mean."),""))
     })
     output$kmcl<-renderPlot({

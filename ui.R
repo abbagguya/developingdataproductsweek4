@@ -31,22 +31,22 @@ shinyUI(fluidPage(
                             tabsetPanel(
                             tabPanel(h5(strong("Green")),
                                 br(),
-                                sliderInput(inputId="p.pnts",label=h6("Number of Points"),0,100,100,10),
-                                sliderInput(inputId="p.mean",label=h6("Mean"),-10,10,0,0.01),
-                                sliderInput(inputId="p.sdev",label=h6("Standard Deviation"),1,3,1,0.01)
+                                sliderInput(inputId="p.pnts",label=h6("Number of Points"),0,100,100,5),
+                                sliderInput(inputId="p.mean",label=h6("Mean"),-5,5,0,0.01),
+                                sliderInput(inputId="p.sdev",label=h6("Standard Deviation"),1,2.5,1,0.01)
                             ),
                             tabPanel(h5(strong("Pink")),
                                 br(),
-                                sliderInput(inputId="g.pnts",label=h6("Number of Points"),0,100,100,10),
-                                sliderInput(inputId="g.mean",label=h6("Mean"),-10,10,0,0.01),
-                                sliderInput(inputId="g.sdev",label=h6("Standard Deviation"),1,3,1,0.01)
+                                sliderInput(inputId="g.pnts",label=h6("Number of Points"),0,100,100,5),
+                                sliderInput(inputId="g.mean",label=h6("Mean"),-5,5,0,0.01),
+                                sliderInput(inputId="g.sdev",label=h6("Standard Deviation"),1,2.5,1,0.01)
                             )
                         )
                     ),
                     mainPanel(width=8,
                         plotOutput(outputId="hist",width="700px",height="400px"),
                         h5("Adjust the parameters in the side bar panel. Hypothesis testing depends on intersection and number of points (sample size)."),
-                        h5("Student's T-test is performed on the two normal distribution samples for which the null hypothesis is that the mean of the pink distribution sample is greater than or equal to the mean of the green distribution sample. If the 95% Confidence-Interval T-test is passed, then the null hypothesis is rejected, i.e. the mean of the green distribution sample is greater than the mean of the pink distribution sample. For large number of points, it is remarkable how close the distribution samples can be, with the hypothesis still rejected. On the other hand, for small number of points (for which the T-distribution is appropriate), rejection of the null hypothesis is more sporadic near the threshold, as expected.")
+                        h5("Student's T-test is performed on the two normal distribution samples for which the null hypothesis is that the mean of the pink distribution sample is greater than or equal to the mean of the green distribution sample. If the 95% Confidence-Interval T-test is passed, then the null hypothesis is rejected, i.e. the mean of the green distribution sample is greater than the mean of the pink distribution sample. For large number of points, it is remarkable how close the distribution samples can be, with the hypothesis rejected. On the other hand, for small number of points (for which the T-distribution is appropriate), rejection of the null hypothesis is more sporadic near the threshold, as expected.")
                     )
             ),
             tabPanel(h4(strong("K-Means Clustering")),
